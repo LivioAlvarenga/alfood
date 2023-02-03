@@ -29,7 +29,7 @@ const ListaRestaurantes = () => {
           id: 3,
           descricao: "Empadão de Frango",
           imagem:
-            "https://t1.uc.ltmcdn.com/pt/images/5/7/1/img_como_fazer_empadao_de_frango_27175_600.jpg",
+            "https://s2.glbimg.com/VIwe4qys5cq0uLKoOgzhEg2W6Xs=/0x0:6240x3512/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/j/U/GCcKqXQSedehZjsvwKNQ/empadao-de-frango-receita-tradicional.jpg",
           nome: "Empadão de Frango",
           restaurante: 1,
           tag: "Portuguesa",
