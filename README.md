@@ -1,5 +1,5 @@
 <h1 align="center"> 
-	Alfood Projeto React/React Hooks - TypeScript - ViteJs.
+	Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.
 </h1>
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -20,7 +20,7 @@
 
 ## 💻 Sobre o projeto
 
-🚀 O Alfood é um site que lista restaurantes e pratos do menu. 
+🚀 O Alfood é um site que lista restaurantes e pratos do menu.
 É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
 
 &nbsp;
@@ -43,11 +43,11 @@
 
 ## 📺 Vitrine Dev
 
-| :placard: Vitrine.Dev |                                                                                                                        |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs.** |
-| :label: Tecnologias   | React, React-Router, TypeScript, ViteJs, Tailwindcss, Radix UI, NodeJs, JavaScript, HTML5, CSS3, Prettier, Eslint      |
-| :rocket: URL          | https://aluroni-livio-alvarenga.vercel.app/                                                                            |
+| :placard: Vitrine.Dev |                                                                                                                |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.**                                            |
+| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, Tailwindcss, NodeJs, JavaScript, HTML5, CSS3, Prettier, Eslint |
+| :rocket: URL          | https://aluroni-livio-alvarenga.vercel.app/                                                                    |
 
 ---
 
@@ -70,6 +70,7 @@ As seguintes ferramentas foram usadas na construção do projeto
   <a href= "https://nodejs.org/en/"><img alt="Node.js badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=339933&logo=Node.js&label=Runtime Environment&message=Node.js&color=3139933"></a>
   <a href= "https://reactjs.org/"><img alt="React badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=61dafb&logo=React&label=Framework&message=React&color=61dafb"></a>
   <a href= "https://reactrouter.com/"><img alt="React Router badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=ca4245&logo=React Router&label=Library&message=React Router&color=ca4245"></a>
+  <a href= "https://axios-http.com/"><img alt="Axios badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=5a29e4&logo=Axios&label=HTTP Client&message=Axios&color=5a29e4"></a>
   <a href= "https://vitejs.dev/"><img alt="site Vite" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=646cff&logo=Vite&label=Tooling&message=Vite&color=646cff"></a>
   <a href= "https://code.visualstudio.com/download"><img alt="vscode download" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=007ACC&logo=Visual Studio Code&label=IDE&message=Visual Studio Code&color=007ACC"></a>
   <a href= "https://github.com/prettier/prettier"><img alt="code formatter prettier" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7B93E&logo=Prettier&label=Code Formatter&message=Prettier&color=F7B93E"></a>
@@ -109,6 +110,9 @@ export default defineConfig({
 
 # Instalando react-router-dom
 npm install react-router-dom
+
+#Instalando biblioteca de Axios para comunicação Http
+npm install axios
 
 ```
 
@@ -151,6 +155,15 @@ npm install -D sass
 
 ```
 
+### Instalando api em server
+
+```bash
+# Fazer um build em container docker
+cd server
+docker-compose build
+
+```
+
 &nbsp;
 
 ---
@@ -161,8 +174,6 @@ npm install -D sass
 ## ⚙️ Funcionalidades
 
 - Em construção
-
-
 
 &nbsp;
 
@@ -178,6 +189,13 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
 # A aplicação será aberta na porta:5173 - acesse http://localhost:5173
+```
+
+### 🧭 Rodando a aplicação server (Modo desenvolvimento)
+
+```bash
+$ docker-compose up
+# A aplicação será aberta na porta:8000 - acesse http://0.0.0.0:8000/
 ```
 
 &nbsp;
