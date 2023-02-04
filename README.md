@@ -13,7 +13,7 @@
 
 &nbsp;
 
-![Aluroni](https://github.com/LivioAlvarenga/aluroni/blob/master/files/capa.gif?raw=true#vitrinedev)
+![Alfood-capa](https://github.com/LivioAlvarenga/alfood/blob/master/files/capa.gif?raw=true#vitrinedev)
 
 &nbsp;
 <a id="-sobre-o-projeto"></a>
@@ -46,8 +46,8 @@
 | :placard: Vitrine.Dev |                                                                                                                |
 | --------------------- | -------------------------------------------------------------------------------------------------------------- |
 | :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.**                                            |
-| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, Tailwindcss, NodeJs, JavaScript, HTML5, CSS3, Prettier, Eslint |
-| :rocket: URL          | https://aluroni-livio-alvarenga.vercel.app/                                                                    |
+| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, HTML5, CSS3, Prettier, Eslint |
+| :rocket: URL          | Em construção...                                                                    |
 
 ---
 
@@ -161,7 +161,6 @@ npm install -D sass
 # Fazer um build em container docker
 cd server
 docker-compose build
-
 ```
 
 &nbsp;
