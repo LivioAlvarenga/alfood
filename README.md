@@ -63,6 +63,7 @@ As seguintes ferramentas foram usadas na construção do projeto
 <p align="center">
   <a href= "https://html5.org/"><img alt="html 5 badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=E34F26&logo=HTML5&label=Markup Language&message=HTML5&color=E34F26"></a>
   <a href= "https://developer.mozilla.org/pt-BR/docs/Web/CSS"><img alt="CSS 3 badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=1572B6&logo=CSS3&label=Style&message=CSS3&color=1572B6"></a>
+  <a href= "https://sass-lang.com/"><img alt="SASS badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=CC6699&logo=Sass&label=used&message=SASS&color=CC6699"></a>
   <a href= "https://tailwindcss.com/"><img alt="Tailwind CSS badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=06b6d4&logo=Tailwind CSS&label=Style&message=Tailwind CSS&color=06b6d4"></a>
   <a href= "https://www.typescriptlang.org/"><img alt="TypeScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=3178c6&logo=TypeScript&label=Language&message=TypeScript&color=3178c6"></a>
   <a href= "https://www.javascript.com/"><img alt="JavaScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7DF1E&logo=JavaScript&label=Language&message=JavaScript&color=F7DF1E"></a>
@@ -85,27 +86,11 @@ As seguintes ferramentas foram usadas na construção do projeto
 ### Criando projeto com ViteJs e React e TypeScript
 
 ```bash
-npm create vite@latest aluroni -- --template react-ts
+npm create vite@latest alfood -- --template react-ts
 
 # Instalando dependências
-cd aluroni
+cd alfood
 npm install
-
-# Instalando vite-plugin-svgr para criar componentes SVG
-npm install vite-plugin-svgr -D
-
-# Em vite.config.ts adicione import e plugin
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import svgr from "vite-plugin-svgr";
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), svgr()],
-});
-
-# Crie uma pasta type e add file svg.d.ts
-/// <reference types="vite-plugin-svgr/client" />
 
 # Instalando vite-tsconfig-paths para fazer imports absolutos
 npm install -D vite-tsconfig-paths
@@ -113,60 +98,17 @@ npm install -D vite-tsconfig-paths
 # Em vite.config.ts adicione import e plugin
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import svgr from "vite-plugin-svgr";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [react(), svgr(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths()],
 });
 
 # Em tsconfig.json adicione a baseURL em compilerOptions
 "baseUrl": "./src"
 
-# Instalando react-icons
-npm install react-icons
-
 # Instalando react-router-dom
 npm install react-router-dom
-
-# Instalar Menubar Radix
-npm install @radix-ui/react-menubar
-
-# Instalar Navigation Menu do Radix
-npm install @radix-ui/react-navigation-menu
-```
-
-### Instalando arquitetura Tailwindcss
-
-```bash
-npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
-
-# Criando tailwind.config.cjs
-
-npx tailwindcss init -p
-
-# Editando npx tailwind.config.cjs
-
-/** @type {import('tailwindcss').Config} \*/
-module.exports = {
-content: ["./index.html", "./src/**/\*.{js,ts,jsx,tsx}"],
-theme: {
-extend: {},
-},
-plugins: [],
-}
-
-# Adicionando configuração Tailwindcss em global.css
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities
-
-# Cria arquivo .prettierrc.json na raiz do projeto
-
-# Inicia projeto
-
-npm run dev
 
 ```
 
@@ -204,8 +146,8 @@ npx eslint ./src --fix
 ### Instalações para suporte
 
 ```bash
-# Instalar CLSX para criar condicionais em className
-npm install clsx
+# Instalar sass para compilar css
+npm install -D sass
 
 ```
 
@@ -218,20 +160,7 @@ npm install clsx
 
 ## ⚙️ Funcionalidades
 
-![Aluroni-home](https://github.com/LivioAlvarenga/aluroni/blob/master/files/laptop.png?raw=true)
-
-- Buscar por descrição de pratos;
-- Filtrar por categoria de pratos;
-- Ordenar por preço, quantidade e serve quantas pessoas;
-- Efeito de zoom em imagens de pratos;
-- MenuNavigation com acessibilidade (Radix UI);
-- Menubar de ordenação com acessibilidade (Radix UI);
-- Site responsivo Mobile, Tablet e Desktop.
-- Page not found 404 com animação personalizada de background.
-- Animação de card em cardápio.
-- SPA com Home, Cardápio, Detalhamento de prato, Sobre e PageNotFound 404.
-
-![Aluroni-desktop](https://github.com/LivioAlvarenga/aluroni/blob/master/files/desktop.png?raw=true)
+- Em construção
 
 
 
@@ -241,9 +170,9 @@ npm install clsx
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/livioalvarenga/aluroni.git
+$ git clone https://github.com/livioalvarenga/alfood.git
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd aluroni
+$ cd alfood
 # Instale as dependências
 $ npm install
 # Execute a aplicação em modo de desenvolvimento
