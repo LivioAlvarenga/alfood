@@ -22,4 +22,7 @@
     border-color: #f2745f;
     transition: 0.5 ease-in-out;
   }
+  &:last-child {
+    margin-left: 20px;
+  }
 }

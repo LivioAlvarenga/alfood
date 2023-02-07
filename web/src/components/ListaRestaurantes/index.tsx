@@ -8,30 +8,24 @@ import Restaurante from "./Restaurante";
 const ListaRestaurantes = () => {
   const [restaurants, setRestaurants] = useState<IRestaurante[]>([]);
   const [nextPage, setNextPage] = useState("");
+  const [previousPage, setPreviousPage] = useState("");
 
-  useEffect(() => {
+  const loadingDados = (url: string) => {
     axios
-      .get<IPaginacao<IRestaurante>>("http://localhost:8000/api/v1/restaurantes/")
-      .then((response) => {
-        setRestaurants(response.data.results);
-        setNextPage(response.data.next);
+      .get<IPaginacao<IRestaurante>>(url)
+      .then((resposta) => {
+        setRestaurants(resposta.data.results);
+        setNextPage(resposta.data.next);
+        setPreviousPage(resposta.data.previous);
       })
-      .catch((error) => {
-        console.log("====>", error);
-      });
-  }, []);
-
-  const viewMore = () => {
-    axios
-      .get<IPaginacao<IRestaurante>>(nextPage)
-      .then((response) => {
-        setRestaurants([...restaurants, ...response.data.results]);
-        setNextPage(response.data.next);
-      })
-      .catch((error) => {
-        console.log("====>", error);
+      .catch((erro) => {
+        console.log(erro);
       });
   };
+
+  useEffect(() => {
+    loadingDados("http://localhost:8000/api/v1/restaurantes/");
+  }, []);
 
   return (
     <section className={style.ListaRestaurantes}>
@@ -41,11 +35,24 @@ const ListaRestaurantes = () => {
       {restaurants?.map((item) => (
         <Restaurante restaurante={item} key={item.id} />
       ))}
-      {nextPage && (
-        <button className={style.ViewMoreBnt} onClick={viewMore}>
-          Ver mais
+      {
+        <button
+          className={style.ViewMoreBnt}
+          onClick={() => loadingDados(previousPage)}
+          disabled={!previousPage}
+        >
+          Página Anterior
         </button>
-      )}
+      }
+      {
+        <button
+          className={style.ViewMoreBnt}
+          onClick={() => loadingDados(nextPage)}
+          disabled={!nextPage}
+        >
+          Próxima página
+        </button>
+      }
     </section>
   );
 };
