@@ -2,3 +2,24 @@
   margin-top: 1.5rem;
   padding: 2rem;
 }
+.ViewMoreBnt {
+  border-radius: 28px;
+  color: #000;
+  display: inline-block;
+  background: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  border-color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-style: solid;
+  margin-top: 20px;
+  transition: 0.5 ease-in-out;
+  &:hover {
+    color: #fff;
+    background: #f2745f;
+    border-color: #f2745f;
+    transition: 0.5 ease-in-out;
+  }
+}

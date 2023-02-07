@@ -1,31 +1,51 @@
 import axios from "axios";
+import { IPaginacao } from "interfaces/IPaginacao";
 import IRestaurante from "interfaces/IRestaurante";
 import { useEffect, useState } from "react";
 import style from "./ListaRestaurantes.module.scss";
 import Restaurante from "./Restaurante";
 
 const ListaRestaurantes = () => {
-  const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([]);
+  const [restaurants, setRestaurants] = useState<IRestaurante[]>([]);
+  const [nextPage, setNextPage] = useState("");
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/v1/restaurantes/")
+      .get<IPaginacao<IRestaurante>>("http://localhost:8000/api/v1/restaurantes/")
       .then((response) => {
-        setRestaurantes(response.data.results);
+        setRestaurants(response.data.results);
+        setNextPage(response.data.next);
       })
       .catch((error) => {
         console.log("====>", error);
       });
   }, []);
 
+  const viewMore = () => {
+    axios
+      .get<IPaginacao<IRestaurante>>(nextPage)
+      .then((response) => {
+        setRestaurants([...restaurants, ...response.data.results]);
+        setNextPage(response.data.next);
+      })
+      .catch((error) => {
+        console.log("====>", error);
+      });
+  };
+
   return (
     <section className={style.ListaRestaurantes}>
       <h1>
         Os restaurantes mais <em>bacanas</em>!
       </h1>
-      {restaurantes?.map((item) => (
+      {restaurants?.map((item) => (
         <Restaurante restaurante={item} key={item.id} />
       ))}
+      {nextPage && (
+        <button className={style.ViewMoreBnt} onClick={viewMore}>
+          Ver mais
+        </button>
+      )}
     </section>
   );
 };
