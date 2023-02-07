@@ -43,11 +43,11 @@
 
 ## 📺 Vitrine Dev
 
-| :placard: Vitrine.Dev |                                                                                                                |
-| --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.**                                            |
+| :placard: Vitrine.Dev |                                                                                           |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.**                       |
 | :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, HTML5, CSS3, Prettier, Eslint |
-| :rocket: URL          | Em construção...                                                                    |
+| :rocket: URL          | Em construção...                                                                          |
 
 ---
 
@@ -72,6 +72,7 @@ As seguintes ferramentas foram usadas na construção do projeto
   <a href= "https://reactrouter.com/"><img alt="React Router badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=ca4245&logo=React Router&label=Library&message=React Router&color=ca4245"></a>
   <a href= "https://axios-http.com/"><img alt="Axios badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=5a29e4&logo=Axios&label=HTTP Client&message=Axios&color=5a29e4"></a>
   <a href= "https://vitejs.dev/"><img alt="site Vite" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=646cff&logo=Vite&label=Tooling&message=Vite&color=646cff"></a>
+  <a href= "https://mui.com/"><img alt="mui ui" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=007FFF&logo=MUI&label=React UI Component&message=MUI UI&color=007ACC"></a>
   <a href= "https://code.visualstudio.com/download"><img alt="vscode download" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=007ACC&logo=Visual Studio Code&label=IDE&message=Visual Studio Code&color=007ACC"></a>
   <a href= "https://github.com/prettier/prettier"><img alt="code formatter prettier" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7B93E&logo=Prettier&label=Code Formatter&message=Prettier&color=F7B93E"></a>
   <a href= "https://eslint.org/"><img alt="code standardization eslint" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=4B32C3&logo=ESLint&label=Code Standardization&message=ESLint&color=4B32C3"></a>
@@ -152,6 +153,10 @@ npx eslint ./src --fix
 ```bash
 # Instalar sass para compilar css
 npm install -D sass
+
+# Instalar componentes MUI
+npm install @mui/material @emotion/react @emotion/styled
+
 
 ```
 
