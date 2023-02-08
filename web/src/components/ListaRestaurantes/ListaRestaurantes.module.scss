@@ -1,18 +1,24 @@
 .ListaRestaurantes {
   margin-top: 1.5rem;
   padding: 2rem;
-  .Title {
+  .BoxTitle {
     display: flex;
     gap: 50px;
     align-items: center;
     justify-content: space-around;
-    .IconForm {
-      position: relative;
-      .Form {
-        width: 300px;
+    .Form {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      .IconForm {
+        position: relative;
+        width: 80%;
         .Input {
           width: 100%;
         }
+      }
+      .SelectBnt {
+        display: flex;
       }
     }
   }
@@ -20,12 +26,20 @@
 
 @media screen and (max-width: 992px) {
   .ListaRestaurantes {
-    .Title {
+    .BoxTitle {
       flex-direction: column;
       gap: 20px;
       margin-bottom: 50px;
       .Form {
         width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        .IconForm {
+          width: 90%;
+        }
+        .SelectBnt {
+          width: 90%;
+        }
       }
     }
   }
