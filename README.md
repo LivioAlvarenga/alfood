@@ -156,6 +156,7 @@ npm install -D sass
 
 # Instalar componentes MUI
 npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
 
 
 ```
