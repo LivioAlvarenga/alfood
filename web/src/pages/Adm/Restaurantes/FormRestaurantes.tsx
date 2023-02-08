@@ -52,12 +52,18 @@ const FormRestaurantes = () => {
 
   return (
     <Box
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "10px",
+        flexGrow: 1,
+      }}
     >
       <Typography component="h1" variant="h6">
         Formulário de Restaurantes
       </Typography>
-      <Box component="form" onSubmit={aoSubmeterForm}>
+      <Box component="form" sx={{ width: "100%" }} onSubmit={aoSubmeterForm}>
         <TextField
           value={nomeRestaurante}
           onChange={(e) => setNomeRestaurante(e.target.value)}
