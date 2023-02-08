@@ -1,4 +1,6 @@
-import { Table, TableContainer } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import { IconButton, Table, TableContainer } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -23,6 +25,20 @@ const AdmRestaurantes = () => {
       });
   }, []);
 
+  const deleteRestaurant = (restaurantToBeExcluded: IRestaurante) => {
+    axios
+      .delete(`http://localhost:8000/api/v2/restaurantes/${restaurantToBeExcluded.id}/`)
+      .then(() => {
+        const restaurantList = restaurants.filter(
+          (restaurant) => restaurant.id !== restaurantToBeExcluded.id
+        );
+        setRestaurants([...restaurantList]);
+      })
+      .catch((error) => {
+        console.log("====>", error);
+      });
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -30,6 +46,7 @@ const AdmRestaurantes = () => {
           <TableRow>
             <TableCell>Nome</TableCell>
             <TableCell>Editar</TableCell>
+            <TableCell>Excluir</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -37,7 +54,17 @@ const AdmRestaurantes = () => {
             <TableRow key={restaurant.id}>
               <TableCell>{restaurant.nome}</TableCell>
               <TableCell>
-                [ <Link to={`/admin/restaurantes/${restaurant.id}`}>Editar</Link> ]
+                <Link to={`/admin/restaurantes/${restaurant.id}`}>
+                  <EditIcon color="primary" />
+                </Link>
+              </TableCell>
+              <TableCell>
+                <IconButton aria-label="delete">
+                  <DeleteIcon
+                    color="error"
+                    onClick={() => deleteRestaurant(restaurant)}
+                  />
+                </IconButton>
               </TableCell>
             </TableRow>
           ))}
