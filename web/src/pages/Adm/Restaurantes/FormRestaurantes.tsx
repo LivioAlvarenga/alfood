@@ -1,6 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import axios from "axios";
+import http from "http";
 import IRestaurante from "interfaces/IRestaurante";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -11,8 +11,8 @@ const FormRestaurantes = () => {
 
   useEffect(() => {
     if (parameters.id) {
-      axios
-        .get<IRestaurante>(`http://localhost:8000/api/v2/restaurantes/${parameters.id}/`)
+      http
+        .get<IRestaurante>(`restaurantes/${parameters.id}/`)
         .then((response) => {
           setNomeRestaurante(response.data.nome);
         })
@@ -26,8 +26,8 @@ const FormRestaurantes = () => {
     event.preventDefault();
 
     if (parameters.id) {
-      axios
-        .put(`http://localhost:8000/api/v2/restaurantes/${parameters.id}/`, {
+      http
+        .put(`restaurantes/${parameters.id}/`, {
           nome: nomeRestaurante,
         })
         .then(() => {
@@ -37,8 +37,8 @@ const FormRestaurantes = () => {
           console.log("====>", error);
         });
     } else {
-      axios
-        .post("http://localhost:8000/api/v2/restaurantes/", {
+      http
+        .post("restaurantes/", {
           nome: nomeRestaurante,
         })
         .then(() => {

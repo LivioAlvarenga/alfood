@@ -6,7 +6,7 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import axios from "axios";
+import http from "http";
 import IRestaurante from "interfaces/IRestaurante";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -15,8 +15,8 @@ const AdmRestaurantes = () => {
   const [restaurants, setRestaurants] = useState<IRestaurante[]>([]);
 
   useEffect(() => {
-    axios
-      .get<IRestaurante[]>("http://localhost:8000/api/v2/restaurantes/")
+    http
+      .get<IRestaurante[]>("restaurantes/")
       .then((response) => {
         setRestaurants(response.data);
       })
@@ -26,8 +26,8 @@ const AdmRestaurantes = () => {
   }, []);
 
   const deleteRestaurant = (restaurantToBeExcluded: IRestaurante) => {
-    axios
-      .delete(`http://localhost:8000/api/v2/restaurantes/${restaurantToBeExcluded.id}/`)
+    http
+      .delete(`restaurantes/${restaurantToBeExcluded.id}/`)
       .then(() => {
         const restaurantList = restaurants.filter(
           (restaurant) => restaurant.id !== restaurantToBeExcluded.id
@@ -61,11 +61,11 @@ const AdmRestaurantes = () => {
                 </Link>
               </TableCell>
               <TableCell>
-                <IconButton aria-label="delete">
-                  <DeleteIcon
-                    color="error"
-                    onClick={() => deleteRestaurant(restaurant)}
-                  />
+                <IconButton
+                  aria-label="delete"
+                  onClick={() => deleteRestaurant(restaurant)}
+                >
+                  <DeleteIcon color="error" />
                 </IconButton>
               </TableCell>
             </TableRow>
