@@ -1,8 +1,4 @@
-import RestaurantIcon from "@mui/icons-material/RestaurantMenu";
-import FormControl from "@mui/material/FormControl";
-import Input from "@mui/material/Input";
-import InputAdornment from "@mui/material/InputAdornment";
-import InputLabel from "@mui/material/InputLabel";
+import TextField from "@mui/material/TextField";
 import axios, { AxiosRequestConfig } from "axios";
 import { IPaginacao } from "interfaces/IPaginacao";
 import IParametrosBusca from "interfaces/IParametrosBusca";
@@ -47,26 +43,22 @@ const ListaRestaurantes = () => {
 
   return (
     <section className={style.ListaRestaurantes}>
-      <h1>
-        Os restaurantes mais <em>bacanas</em>!
-      </h1>
+      <div className={style.Title}>
+        <h1>
+          Os restaurantes mais <em>bacanas</em>!
+        </h1>
 
-      <form onSubmit={goSearch}>
-        <FormControl variant="standard">
-          <InputLabel htmlFor="input-with-icon-adornment">Nome do Restaurant</InputLabel>
-          <Input
-            id="input-with-icon-adornment"
+        <form className={style.Form} onSubmit={goSearch}>
+          <TextField
+            className={style.Input}
             type="text"
+            variant="standard"
+            label="Nome do Restaurante"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            startAdornment={
-              <InputAdornment position="start">
-                <RestaurantIcon fontSize="small" />
-              </InputAdornment>
-            }
           />
-        </FormControl>
-      </form>
+        </form>
+      </div>
 
       {restaurants?.map((item) => (
         <Restaurante restaurante={item} key={item.id} />

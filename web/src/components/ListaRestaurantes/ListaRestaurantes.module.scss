@@ -1,7 +1,34 @@
 .ListaRestaurantes {
   margin-top: 1.5rem;
   padding: 2rem;
+  .Title {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+    .Form {
+      width: 300px;
+      .Input {
+        width: 100%;
+      }
+    }
+  }
 }
+
+@media screen and (max-width: 992px) {
+  .ListaRestaurantes {
+    .Title {
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 50px;
+      .Form {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .ViewMoreBnt {
   border-radius: 28px;
   color: #000;
