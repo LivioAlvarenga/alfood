@@ -6,10 +6,13 @@
     gap: 50px;
     align-items: center;
     justify-content: space-around;
-    .Form {
-      width: 300px;
-      .Input {
-        width: 100%;
+    .IconForm {
+      position: relative;
+      .Form {
+        width: 300px;
+        .Input {
+          width: 100%;
+        }
       }
     }
   }
@@ -20,7 +23,6 @@
     .Title {
       flex-direction: column;
       gap: 20px;
-      align-items: start;
       margin-bottom: 50px;
       .Form {
         width: 100%;

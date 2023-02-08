@@ -1,3 +1,5 @@
+import SearchIcon from "@mui/icons-material/Search";
+import { red } from "@mui/material/colors";
 import TextField from "@mui/material/TextField";
 import axios, { AxiosRequestConfig } from "axios";
 import { IPaginacao } from "interfaces/IPaginacao";
@@ -41,23 +43,29 @@ const ListaRestaurantes = () => {
     loadingDados("http://localhost:8000/api/v1/restaurantes/");
   }, []);
 
+  const primary = red[500]; // #f44336
+
   return (
     <section className={style.ListaRestaurantes}>
       <div className={style.Title}>
         <h1>
           Os restaurantes mais <em>bacanas</em>!
         </h1>
-
-        <form className={style.Form} onSubmit={goSearch}>
-          <TextField
-            className={style.Input}
-            type="text"
-            variant="standard"
-            label="Nome do Restaurante"
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
+        <div className={style.IconForm}>
+          <SearchIcon
+            sx={{ position: "absolute", color: "gray", left: -30, bottom: 2 }}
           />
-        </form>
+          <form className={style.Form} onSubmit={goSearch}>
+            <TextField
+              className={style.Input}
+              type="text"
+              variant="standard"
+              label="Nome do Restaurante"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+            />
+          </form>
+        </div>
       </div>
 
       {restaurants?.map((item) => (
