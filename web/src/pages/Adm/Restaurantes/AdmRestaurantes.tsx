@@ -55,7 +55,9 @@ const AdmRestaurantes = () => {
               <TableCell>{restaurant.nome}</TableCell>
               <TableCell>
                 <Link to={`/admin/restaurantes/${restaurant.id}`}>
-                  <EditIcon color="primary" />
+                  <IconButton aria-label="edit">
+                    <EditIcon color="primary" />
+                  </IconButton>
                 </Link>
               </TableCell>
               <TableCell>
