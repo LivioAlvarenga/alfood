@@ -1,5 +1,4 @@
 import SearchIcon from "@mui/icons-material/Search";
-import { red } from "@mui/material/colors";
 import TextField from "@mui/material/TextField";
 import axios, { AxiosRequestConfig } from "axios";
 import { IPaginacao } from "interfaces/IPaginacao";
@@ -42,8 +41,6 @@ const ListaRestaurantes = () => {
   useEffect(() => {
     loadingDados("http://localhost:8000/api/v1/restaurantes/");
   }, []);
-
-  const primary = red[500]; // #f44336
 
   return (
     <section className={style.ListaRestaurantes}>
