@@ -13,6 +13,7 @@ export default function AppRouter() {
           <Route path="/restaurantes" element={<VitrineRestaurantes />} />
           <Route path="/admin/restaurantes" element={<AdmRestaurantes />} />
           <Route path="/admin/restaurantes/novo" element={<FormRestaurantes />} />
+          <Route path="/admin/restaurantes/:id" element={<FormRestaurantes />} />
         </Routes>
       </Router>
     </main>
