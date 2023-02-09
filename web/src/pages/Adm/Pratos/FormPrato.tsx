@@ -11,11 +11,14 @@ import {
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import http from "http";
+import IPrato from "interfaces/IPrato";
 import IRestaurante from "interfaces/IRestaurante";
 import ITag from "interfaces/ITag";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const FormPrato = () => {
+  const parameters = useParams();
   const [foodName, setFoodName] = useState("");
   const [foodDescription, setFoodDescription] = useState("");
   const [foodTag, setFoodTag] = useState("");
@@ -43,6 +46,22 @@ const FormPrato = () => {
       .catch((error) => {
         console.log("====>", error);
       });
+
+    if (parameters.id) {
+      http
+        .get<IPrato>(`pratos/${parameters.id}/`)
+        .then((response) => {
+          setFoodName(response.data.nome);
+          setFoodDescription(response.data.descricao);
+          setFoodTag(response.data.tag);
+          setRestaurant(String(response.data.restaurante));
+          setFoodImgName(response.data.imagem);
+          setFoodImg(null);
+        })
+        .catch((error) => {
+          console.log("====>", error);
+        });
+    }
   }, []);
 
   const selectImage = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,28 +86,53 @@ const FormPrato = () => {
       formData.append("imagem", foodImg);
     }
 
-    http
-      .request({
-        url: "pratos/",
-        method: "POST",
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        data: formData,
-      })
-      .then(() => {
-        setFoodName("");
-        setFoodDescription("");
-        setFoodTag("");
-        setRestaurant("");
-        setFoodImgName("");
-        setFoodImg(null);
+    if (parameters.id) {
+      http
+        .request({
+          url: `pratos/${parameters.id}/`,
+          method: "PUT",
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          data: formData,
+        })
+        .then(() => {
+          setFoodName("");
+          setFoodDescription("");
+          setFoodTag("");
+          setRestaurant("");
+          setFoodImgName("");
+          setFoodImg(null);
 
-        alert("Prato Cadastrado com sucesso!");
-      })
-      .catch((error) => {
-        console.log("====>", error);
-      });
+          alert("Prato atualizado com sucesso!");
+        })
+        .catch((error) => {
+          console.log("====>", error);
+        });
+    } else {
+      http
+        .request({
+          url: "pratos/",
+          method: "POST",
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          data: formData,
+        })
+        .then(() => {
+          setFoodName("");
+          setFoodDescription("");
+          setFoodTag("");
+          setRestaurant("");
+          setFoodImgName("");
+          setFoodImg(null);
+
+          alert("Prato Cadastrado com sucesso!");
+        })
+        .catch((error) => {
+          console.log("====>", error);
+        });
+    }
   };
 
   return (

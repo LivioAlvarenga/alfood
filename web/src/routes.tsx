@@ -20,6 +20,7 @@ export default function AppRouter() {
             <Route path="restaurantes/:id" element={<FormRestaurantes />} />
             <Route path="pratos" element={<AdmPratos />} />
             <Route path="pratos/novo" element={<FormPrato />} />
+            <Route path="pratos/:id" element={<FormPrato />} />
           </Route>
         </Routes>
       </Router>
