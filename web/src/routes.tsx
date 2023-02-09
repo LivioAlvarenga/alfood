@@ -1,5 +1,6 @@
 import PaginaBaseAdmin from "pages/Adm/PaginaBaseAdmin";
 import AdmPratos from "pages/Adm/Pratos/AdministracaoPratos";
+import FormPrato from "pages/Adm/Pratos/FormPrato";
 import AdmRestaurantes from "pages/Adm/Restaurantes/AdmRestaurantes";
 import FormRestaurantes from "pages/Adm/Restaurantes/FormRestaurantes";
 import Home from "pages/Home";
@@ -18,6 +19,7 @@ export default function AppRouter() {
             <Route path="restaurantes/novo" element={<FormRestaurantes />} />
             <Route path="restaurantes/:id" element={<FormRestaurantes />} />
             <Route path="pratos" element={<AdmPratos />} />
+            <Route path="pratos/novo" element={<FormPrato />} />
           </Route>
         </Routes>
       </Router>
