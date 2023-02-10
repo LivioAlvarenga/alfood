@@ -29,11 +29,11 @@ Consumimos dados de uma API Rest e transformamos o site estático em dinâmico c
 &nbsp;
 
 <p align="center">
-  <a href="#license"><img src="https://img.shields.io/github/license/LivioAlvarenga/aluroni?color=ff0000"></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni/issues"><img src="https://img.shields.io/github/issues/LivioAlvarenga/aluroni" alt="issue site aluroni" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/count/LivioAlvarenga/aluroni" alt="total amount of programming languages used in the project" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/top/LivioAlvarenga/aluroni" alt="most used language in the projects" /></a>
-  <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/repo-size/LivioAlvarenga/aluroni" alt="repository size" /></a>
+  <a href="#license"><img src="https://img.shields.io/github/license/LivioAlvarenga/alfood?color=ff0000"></a>
+  <a href="https://github.com/LivioAlvarenga/alfood/issues"><img src="https://img.shields.io/github/issues/LivioAlvarenga/alfood" alt="issue site alfood" /></a>
+  <a href="https://github.com/LivioAlvarenga/alfood"><img src="https://img.shields.io/github/languages/count/LivioAlvarenga/alfood" alt="total amount of programming languages used in the project" /></a>
+  <a href="https://github.com/LivioAlvarenga/alfood"><img src="https://img.shields.io/github/languages/top/LivioAlvarenga/alfood" alt="most used language in the projects" /></a>
+  <a href="https://github.com/LivioAlvarenga/alfood"><img src="https://img.shields.io/github/repo-size/LivioAlvarenga/alfood" alt="repository size" /></a>
 <p>
 
 &nbsp;
