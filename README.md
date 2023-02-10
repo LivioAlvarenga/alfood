@@ -1,5 +1,5 @@
 <h1 align="center"> 
-	Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.
+	Alfood - Consumindo dados de uma API Rest - React/React Hooks - TypeScript - ViteJs - Axios - MUI UI - Área Administração.
 </h1>
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
@@ -13,7 +13,8 @@
 
 &nbsp;
 
-![Alfood-capa](https://github.com/LivioAlvarenga/alfood/blob/master/files/capa.gif?raw=true#vitrinedev)
+![Alfood-home](https://github.com/LivioAlvarenga/alfood/blob/master/files/Home-Alfood.png?raw=true#vitrinedev)
+![Alfood-restaurante](https://github.com/LivioAlvarenga/alfood/blob/master/files/Restaurantes-Alfood.png?raw=true)
 
 &nbsp;
 <a id="-sobre-o-projeto"></a>
@@ -21,7 +22,9 @@
 ## 💻 Sobre o projeto
 
 🚀 O Alfood é um site que lista restaurantes e pratos do menu.
-É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
+Consumimos dados de uma API Rest e transformamos o site estático em dinâmico com área administrativa com CRUD de restaurantes e pratos.
+
+- React/React Hooks - TypeScript - ViteJs - Axios - MUI UI - Área Administração
 
 &nbsp;
 
@@ -31,7 +34,6 @@
   <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/count/LivioAlvarenga/aluroni" alt="total amount of programming languages used in the project" /></a>
   <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/languages/top/LivioAlvarenga/aluroni" alt="most used language in the projects" /></a>
   <a href="https://github.com/LivioAlvarenga/aluroni"><img src="https://img.shields.io/github/repo-size/LivioAlvarenga/aluroni" alt="repository size" /></a>
-  <a href="https://aluroni-livio-alvarenga.vercel.app/"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
 <p>
 
 &nbsp;
@@ -43,11 +45,10 @@
 
 ## 📺 Vitrine Dev
 
-| :placard: Vitrine.Dev |                                                                                           |
-| --------------------- | ----------------------------------------------------------------------------------------- |
-| :sparkles: Nome       | **Alfood Projeto React/React Hooks - TypeScript - ViteJs - Axios.**                       |
-| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, HTML5, CSS3, Prettier, Eslint |
-| :rocket: URL          | Em construção...                                                                          |
+| :placard: Vitrine.Dev |                                                                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| :sparkles: Nome       | **Alfood - Consumindo dados de uma API Rest - React/React Hooks - TypeScript - ViteJs - Axios - MUI UI - Área Administração.** |
+| :label: Tecnologias   | React, React-Router, TypeScript, Axios, ViteJs, JavaScript, MUI UI, HTML5, CSS3, Prettier, Eslint                              |
 
 ---
 
@@ -64,7 +65,6 @@ As seguintes ferramentas foram usadas na construção do projeto
   <a href= "https://html5.org/"><img alt="html 5 badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=E34F26&logo=HTML5&label=Markup Language&message=HTML5&color=E34F26"></a>
   <a href= "https://developer.mozilla.org/pt-BR/docs/Web/CSS"><img alt="CSS 3 badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=1572B6&logo=CSS3&label=Style&message=CSS3&color=1572B6"></a>
   <a href= "https://sass-lang.com/"><img alt="SASS badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=CC6699&logo=Sass&label=used&message=SASS&color=CC6699"></a>
-  <a href= "https://tailwindcss.com/"><img alt="Tailwind CSS badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=06b6d4&logo=Tailwind CSS&label=Style&message=Tailwind CSS&color=06b6d4"></a>
   <a href= "https://www.typescriptlang.org/"><img alt="TypeScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=3178c6&logo=TypeScript&label=Language&message=TypeScript&color=3178c6"></a>
   <a href= "https://www.javascript.com/"><img alt="JavaScript badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7DF1E&logo=JavaScript&label=Language&message=JavaScript&color=F7DF1E"></a>
   <a href= "https://nodejs.org/en/"><img alt="Node.js badge" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=339933&logo=Node.js&label=Runtime Environment&message=Node.js&color=3139933"></a>
@@ -178,7 +178,31 @@ docker-compose build
 
 ## ⚙️ Funcionalidades
 
-- Em construção
+- Lista de restaurantes com pratos
+- Filtro por restaurante
+- Ordenação de restaurantes
+- Comunicação com API REST
+
+&nbsp;
+
+![Alfood-api-rest](https://github.com/LivioAlvarenga/alfood/blob/master/files/API-Rest.png?raw=true)
+
+&nbsp;
+
+- Area administrativa com CRUD de restaurantes, sem necessidade de dev atualizar dados do site.
+
+&nbsp;
+
+![Alfood-admin-restaurante](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Restaurante.png?raw=true)
+![Alfood-admin-novo-restaurante](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Novo-Restaurante.png?raw=true)
+
+&nbsp;
+
+- Area administrativa com CRUD de pratos, sem necessidade de dev atualizar dados do site.
+
+&nbsp;
+![Alfood-admin-pratos](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Pratos.png?raw=true)
+![Alfood-admin-novo-prato](https://github.com/LivioAlvarenga/alfood/blob/master/files/Admin-Novo-Prato.png?raw=true)
 
 &nbsp;
 
